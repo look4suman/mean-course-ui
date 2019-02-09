@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { PostService } from '../service/post.service';
+import { Post } from "../model/post.model";
 
 @Component({
   selector: 'app-post-create',
