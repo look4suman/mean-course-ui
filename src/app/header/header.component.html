@@ -1,1 +1,9 @@
-<mat-toolbar color="primary">My Messages</mat-toolbar>
+<mat-toolbar color="primary">
+  <span>My Messages</span>
+  <ul>
+    <li>
+      <a [routerLink]="['/']" routerLinkActive="router-link-active">List</a>
+      <a [routerLink]="['/create']" routerLinkActive="router-link-active">Create</a>
+    </li>
+  </ul>
+</mat-toolbar>

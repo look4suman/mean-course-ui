@@ -1,3 +1,20 @@
 mat-card {
   margin: auto;
 }
+
+.image-preview {
+  height: 5rem;
+  margin: 1rem 0;
+}
+
+.image-preview img {
+  height: 100%
+}
+
+.post-image {
+  width: 100%
+}
+
+.post-image img {
+  width: 100%
+}
