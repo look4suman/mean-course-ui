@@ -1,9 +1,20 @@
 <mat-toolbar color="primary">
-  <span>My Messages</span>
+  <span>
+    <a [routerLink]="['/']" routerLinkActive="router-link-active">Messages</a>
+  </span>
+  <span class="spacer"></span>
   <ul>
-    <li>
-      <a [routerLink]="['/']" routerLinkActive="router-link-active">List</a>
-      <a [routerLink]="['/create']" routerLinkActive="router-link-active">Create</a>
+    <li *ngIf="userIsAuthenticated">
+      <a [routerLink]="['/create']" routerLinkActive="router-link-active">New Post</a>
+    </li>
+    <li *ngIf="!userIsAuthenticated">
+      <a [routerLink]="['/login']" routerLinkActive="router-link-active">Login</a>
+    </li>
+    <li *ngIf="!userIsAuthenticated">
+      <a [routerLink]="['/signup']" routerLinkActive="router-link-active">Sign Up</a>
+    </li>
+    <li *ngIf="userIsAuthenticated">
+      <button mat-button (click)="onLogout()">Logout</button>
     </li>
   </ul>
 </mat-toolbar>
